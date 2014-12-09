@@ -22,10 +22,16 @@
                                 <accessibility key="accessibilityConfiguration" label="Set your search RASIUS:">
                                     <accessibilityTraits key="traits" none="YES"/>
                                 </accessibility>
+                                <connections>
+                                    <action selector="distanceSliderValueChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="MvN-TM-mXF"/>
+                                </connections>
                             </slider>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set your search radius: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KUJ-rl-FUm">
                                 <rect key="frame" x="20" y="72" width="182" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="182" id="Vjp-jT-k7B"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -52,8 +58,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Distance" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PII-Am-6xB">
-                                <rect key="frame" x="210" y="72" width="67" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PII-Am-6xB">
+                                <rect key="frame" x="210" y="72" width="90" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
@@ -61,17 +67,20 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="PII-Am-6xB" firstAttribute="leading" secondItem="KUJ-rl-FUm" secondAttribute="trailing" constant="8" symbolic="YES" id="6Bx-nq-gB8"/>
                             <constraint firstItem="IIu-1j-8mC" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" symbolic="YES" id="A4n-YV-BBr"/>
                             <constraint firstItem="IIu-1j-8mC" firstAttribute="top" secondItem="KUJ-rl-FUm" secondAttribute="bottom" constant="8" symbolic="YES" id="AuZ-E1-84t"/>
                             <constraint firstItem="KUJ-rl-FUm" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="20" symbolic="YES" id="BEm-9V-hRt"/>
                             <constraint firstItem="Rln-Mc-W0O" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="Bfq-NM-AGb"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Rln-Mc-W0O" secondAttribute="bottom" id="IUd-eH-lkV"/>
+                            <constraint firstItem="PII-Am-6xB" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="20" symbolic="YES" id="M5b-8J-wxJ"/>
                             <constraint firstAttribute="trailing" secondItem="oTR-G1-aFI" secondAttribute="trailing" constant="20" symbolic="YES" id="UG9-gK-ZZd"/>
                             <constraint firstAttribute="trailing" secondItem="IIu-1j-8mC" secondAttribute="trailing" constant="20" symbolic="YES" id="UhH-KA-sVa"/>
                             <constraint firstAttribute="trailing" secondItem="Rln-Mc-W0O" secondAttribute="trailing" id="WEn-O8-R41"/>
                             <constraint firstAttribute="centerX" secondItem="NYi-qM-KZR" secondAttribute="centerX" id="WLb-pe-dfl"/>
                             <constraint firstItem="NYi-qM-KZR" firstAttribute="top" secondItem="k6C-a6-ONI" secondAttribute="bottom" constant="8" symbolic="YES" id="ZR9-2N-6Ng"/>
                             <constraint firstItem="k6C-a6-ONI" firstAttribute="top" secondItem="IIu-1j-8mC" secondAttribute="bottom" constant="8" symbolic="YES" id="dbn-nu-Xzq"/>
+                            <constraint firstAttribute="trailing" secondItem="PII-Am-6xB" secondAttribute="trailing" constant="20" symbolic="YES" id="enK-SN-Phj"/>
                             <constraint firstItem="oTR-G1-aFI" firstAttribute="top" secondItem="IIu-1j-8mC" secondAttribute="bottom" constant="8" symbolic="YES" id="fnC-OG-5Y7"/>
                             <constraint firstItem="k6C-a6-ONI" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" symbolic="YES" id="juT-gb-N6b"/>
                             <constraint firstItem="Rln-Mc-W0O" firstAttribute="top" secondItem="NYi-qM-KZR" secondAttribute="bottom" constant="8" symbolic="YES" id="nHO-KC-5vJ"/>

@@ -26,7 +26,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self updateDistanceLabel];
+    UILongPressGestureRecognizer *longPressGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleLongPressGesture:)];
+    [self.mapView addGestureRecognizer:longPressGesture];
 }
 
 - (void)didReceiveMemoryWarning
@@ -45,5 +47,28 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+#pragma mark - LakerLocator UI Controls
+
+// Update the label with the current distance from the distanceSlider
+-(void)updateDistanceLabel
+{
+    self.distanceLabel.text = [NSString stringWithFormat:@"%d miles", (int)self.distanceSlider.value];
+}
+
+- (IBAction)distanceSliderValueChanged:(id)sender {
+    [self updateDistanceLabel];
+}
+
+-(void)handleLongPressGesture:(UIGestureRecognizer*)sender {
+    // This is important if you only want to receive one tap and hold event
+    CGPoint touchPoint = [sender locationInView:self.mapView];
+    CLLocationCoordinate2D locationCoordinates = [self.mapView convertPoint:touchPoint toCoordinateFromView:self.mapView];
+
+    MKPointAnnotation *newPin = [[MKPointAnnotation alloc] init];
+    newPin.coordinate = locationCoordinates;
+    [self.mapView removeAnnotations:self.mapView.annotations];
+    [self.mapView addAnnotation:newPin];
+}
 
 @end
