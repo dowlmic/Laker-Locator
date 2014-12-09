@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--View Controller - Laker Locator-->
+        <!--Laker Locator Map View Controller - Laker Locator-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="MDViewController" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="MDLakerLocatorMapViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,7 +15,68 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="1" maxValue="400" translatesAutoresizingMaskIntoConstraints="NO" id="IIu-1j-8mC">
+                                <rect key="frame" x="18" y="101" width="284" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Set your search RASIUS:">
+                                    <accessibilityTraits key="traits" none="YES"/>
+                                </accessibility>
+                            </slider>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set your search radius: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KUJ-rl-FUm">
+                                <rect key="frame" x="20" y="72" width="182" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Long press to indicate search loctation:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NYi-qM-KZR">
+                                <rect key="frame" x="9" y="168" width="303" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Rln-Mc-W0O">
+                                <rect key="frame" x="0.0" y="197" width="320" height="371"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            </mapView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k6C-a6-ONI">
+                                <rect key="frame" x="20" y="139" width="10" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="400" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oTR-G1-aFI">
+                                <rect key="frame" x="271" y="139" width="29" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Distance" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PII-Am-6xB">
+                                <rect key="frame" x="210" y="72" width="67" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="IIu-1j-8mC" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" symbolic="YES" id="A4n-YV-BBr"/>
+                            <constraint firstItem="IIu-1j-8mC" firstAttribute="top" secondItem="KUJ-rl-FUm" secondAttribute="bottom" constant="8" symbolic="YES" id="AuZ-E1-84t"/>
+                            <constraint firstItem="KUJ-rl-FUm" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="20" symbolic="YES" id="BEm-9V-hRt"/>
+                            <constraint firstItem="Rln-Mc-W0O" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="Bfq-NM-AGb"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Rln-Mc-W0O" secondAttribute="bottom" id="IUd-eH-lkV"/>
+                            <constraint firstAttribute="trailing" secondItem="oTR-G1-aFI" secondAttribute="trailing" constant="20" symbolic="YES" id="UG9-gK-ZZd"/>
+                            <constraint firstAttribute="trailing" secondItem="IIu-1j-8mC" secondAttribute="trailing" constant="20" symbolic="YES" id="UhH-KA-sVa"/>
+                            <constraint firstAttribute="trailing" secondItem="Rln-Mc-W0O" secondAttribute="trailing" id="WEn-O8-R41"/>
+                            <constraint firstAttribute="centerX" secondItem="NYi-qM-KZR" secondAttribute="centerX" id="WLb-pe-dfl"/>
+                            <constraint firstItem="NYi-qM-KZR" firstAttribute="top" secondItem="k6C-a6-ONI" secondAttribute="bottom" constant="8" symbolic="YES" id="ZR9-2N-6Ng"/>
+                            <constraint firstItem="k6C-a6-ONI" firstAttribute="top" secondItem="IIu-1j-8mC" secondAttribute="bottom" constant="8" symbolic="YES" id="dbn-nu-Xzq"/>
+                            <constraint firstItem="oTR-G1-aFI" firstAttribute="top" secondItem="IIu-1j-8mC" secondAttribute="bottom" constant="8" symbolic="YES" id="fnC-OG-5Y7"/>
+                            <constraint firstItem="k6C-a6-ONI" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" symbolic="YES" id="juT-gb-N6b"/>
+                            <constraint firstItem="Rln-Mc-W0O" firstAttribute="top" secondItem="NYi-qM-KZR" secondAttribute="bottom" constant="8" symbolic="YES" id="nHO-KC-5vJ"/>
+                            <constraint firstItem="KUJ-rl-FUm" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" symbolic="YES" id="yCm-NG-9X5"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Laker Locator" id="sxG-2g-qIB">
                         <barButtonItem key="rightBarButtonItem" systemItem="search" id="QAM-Nu-j2M">
@@ -24,15 +85,20 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="distanceLabel" destination="PII-Am-6xB" id="aGz-6N-tuB"/>
+                        <outlet property="distanceSlider" destination="IIu-1j-8mC" id="KAq-qL-fgt"/>
+                        <outlet property="mapView" destination="Rln-Mc-W0O" id="t9Y-9J-WSb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="638" y="138"/>
         </scene>
-        <!--View Controller - Tweetin' Lakers!-->
+        <!--Tweet View Controller - Tweetin' Lakers!-->
         <scene sceneID="mLH-hR-0TT">
             <objects>
-                <viewController id="866-8j-Zb6" sceneMemberID="viewController">
+                <viewController id="866-8j-Zb6" customClass="MDTweetViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KYD-oL-a7Q"/>
                         <viewControllerLayoutGuide type="bottom" id="JXb-qu-3aU"/>
@@ -40,7 +106,61 @@
                     <view key="view" contentMode="scaleToFill" id="aVf-ge-SbK">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="77" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="2sO-Ns-8DE">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="tweetCell" rowHeight="77" id="7kX-kt-PcF" customClass="MDTweetTableViewCell">
+                                        <rect key="frame" x="0.0" y="86" width="320" height="77"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7kX-kt-PcF" id="Uh8-lm-Lfs">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="76"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Owd-dk-2PT">
+                                                    <rect key="frame" x="20" y="20" width="43" height="36"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="43" id="Cfi-V5-wRp"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kJ4-ja-Ibf">
+                                                    <rect key="frame" x="71" y="0.0" width="229" height="76"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="kJ4-ja-Ibf" secondAttribute="trailing" constant="20" symbolic="YES" id="55c-VA-t3r"/>
+                                                <constraint firstItem="kJ4-ja-Ibf" firstAttribute="leading" secondItem="Owd-dk-2PT" secondAttribute="trailing" constant="8" symbolic="YES" id="5tq-Xu-2W2"/>
+                                                <constraint firstItem="kJ4-ja-Ibf" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Owd-dk-2PT" secondAttribute="trailing" constant="8" symbolic="YES" id="JdV-qK-cQH"/>
+                                                <constraint firstItem="kJ4-ja-Ibf" firstAttribute="top" secondItem="Uh8-lm-Lfs" secondAttribute="top" id="MAK-HZ-noI"/>
+                                                <constraint firstItem="Owd-dk-2PT" firstAttribute="top" secondItem="Uh8-lm-Lfs" secondAttribute="top" constant="20" symbolic="YES" id="cqT-3K-jLK"/>
+                                                <constraint firstAttribute="bottom" secondItem="kJ4-ja-Ibf" secondAttribute="bottom" id="iVB-BK-dhi"/>
+                                                <constraint firstItem="Owd-dk-2PT" firstAttribute="leading" secondItem="Uh8-lm-Lfs" secondAttribute="leading" constant="20" symbolic="YES" id="ncF-Fi-fsc"/>
+                                                <constraint firstAttribute="bottom" secondItem="Owd-dk-2PT" secondAttribute="bottom" constant="20" symbolic="YES" id="q6W-dg-QPJ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="tweetImageView" destination="Owd-dk-2PT" id="dDw-La-1lG"/>
+                                            <outlet property="tweetTextView" destination="kJ4-ja-Ibf" id="cxi-Dz-SLE"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2sO-Ns-8DE" firstAttribute="top" secondItem="KYD-oL-a7Q" secondAttribute="bottom" id="DZa-SC-4uj"/>
+                            <constraint firstAttribute="trailing" secondItem="2sO-Ns-8DE" secondAttribute="trailing" id="Gtp-mZ-4RS"/>
+                            <constraint firstItem="JXb-qu-3aU" firstAttribute="top" secondItem="2sO-Ns-8DE" secondAttribute="bottom" id="eMB-Z6-R0b"/>
+                            <constraint firstItem="2sO-Ns-8DE" firstAttribute="leading" secondItem="aVf-ge-SbK" secondAttribute="leading" id="il9-aN-w9v"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Tweetin' Lakers!" id="x0b-xE-fDi">
                         <barButtonItem key="rightBarButtonItem" title="Map" id="D8Y-84-7w8">
@@ -49,15 +169,18 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tweetTableView" destination="2sO-Ns-8DE" id="WIB-mE-lKP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KIt-uf-qjZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1062" y="138"/>
         </scene>
-        <!--View Controller-->
+        <!--Tweet Map View Controller-->
         <scene sceneID="8mE-SJ-OYm">
             <objects>
-                <viewController id="2Q7-yn-qyM" sceneMemberID="viewController">
+                <viewController id="2Q7-yn-qyM" customClass="MDTweetMapViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="UKx-jh-7Yl"/>
                         <viewControllerLayoutGuide type="bottom" id="DIq-Rp-0RP"/>
@@ -65,9 +188,24 @@
                     <view key="view" contentMode="scaleToFill" id="vub-OK-ahZ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="6A5-jr-aR5">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </mapView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6A5-jr-aR5" firstAttribute="top" secondItem="UKx-jh-7Yl" secondAttribute="bottom" id="Xzy-h8-hvF"/>
+                            <constraint firstAttribute="trailing" secondItem="6A5-jr-aR5" secondAttribute="trailing" id="t5L-Z2-KVQ"/>
+                            <constraint firstItem="6A5-jr-aR5" firstAttribute="leading" secondItem="vub-OK-ahZ" secondAttribute="leading" id="vba-P2-mlf"/>
+                            <constraint firstItem="DIq-Rp-0RP" firstAttribute="top" secondItem="6A5-jr-aR5" secondAttribute="bottom" id="vnE-LC-fyP"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Crl-dT-MMM"/>
+                    <connections>
+                        <outlet property="tweetMapView" destination="6A5-jr-aR5" id="vMT-5E-hy1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ebZ-5f-ryX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

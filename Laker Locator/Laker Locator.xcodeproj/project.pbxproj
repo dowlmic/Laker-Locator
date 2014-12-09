@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		33E470E91A366BC900F98235 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33E470E81A366BC900F98235 /* MapKit.framework */; };
+		33E470EB1A366BD000F98235 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33E470EA1A366BD000F98235 /* Social.framework */; };
+		33E470EE1A36711900F98235 /* MDLakerLocatorMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E470ED1A36711900F98235 /* MDLakerLocatorMapViewController.m */; };
+		33E470F11A36727F00F98235 /* MDTweetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E470F01A36727F00F98235 /* MDTweetViewController.m */; };
+		33E470F41A36738F00F98235 /* MDTweetTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E470F31A36738F00F98235 /* MDTweetTableViewCell.m */; };
+		33E470F71A36744900F98235 /* MDTweetMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E470F61A36744900F98235 /* MDTweetMapViewController.m */; };
 		64FD96121A36646E00E389D3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64FD96111A36646E00E389D3 /* Foundation.framework */; };
 		64FD96141A36646E00E389D3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64FD96131A36646E00E389D3 /* CoreGraphics.framework */; };
 		64FD96161A36646E00E389D3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64FD96151A36646E00E389D3 /* UIKit.framework */; };
@@ -34,6 +40,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		33E470E81A366BC900F98235 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		33E470EA1A366BD000F98235 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		33E470EC1A36711900F98235 /* MDLakerLocatorMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDLakerLocatorMapViewController.h; sourceTree = "<group>"; };
+		33E470ED1A36711900F98235 /* MDLakerLocatorMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDLakerLocatorMapViewController.m; sourceTree = "<group>"; };
+		33E470EF1A36727F00F98235 /* MDTweetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDTweetViewController.h; sourceTree = "<group>"; };
+		33E470F01A36727F00F98235 /* MDTweetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDTweetViewController.m; sourceTree = "<group>"; };
+		33E470F21A36738F00F98235 /* MDTweetTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDTweetTableViewCell.h; sourceTree = "<group>"; };
+		33E470F31A36738F00F98235 /* MDTweetTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDTweetTableViewCell.m; sourceTree = "<group>"; };
+		33E470F51A36744900F98235 /* MDTweetMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDTweetMapViewController.h; sourceTree = "<group>"; };
+		33E470F61A36744900F98235 /* MDTweetMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDTweetMapViewController.m; sourceTree = "<group>"; };
 		64FD960E1A36646E00E389D3 /* Laker Locator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Laker Locator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		64FD96111A36646E00E389D3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		64FD96131A36646E00E389D3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -60,6 +76,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33E470EB1A366BD000F98235 /* Social.framework in Frameworks */,
+				33E470E91A366BC900F98235 /* MapKit.framework in Frameworks */,
 				64FD96141A36646E00E389D3 /* CoreGraphics.framework in Frameworks */,
 				64FD96161A36646E00E389D3 /* UIKit.framework in Frameworks */,
 				64FD96121A36646E00E389D3 /* Foundation.framework in Frameworks */,
@@ -101,6 +119,8 @@
 		64FD96101A36646E00E389D3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				33E470EA1A366BD000F98235 /* Social.framework */,
+				33E470E81A366BC900F98235 /* MapKit.framework */,
 				64FD96111A36646E00E389D3 /* Foundation.framework */,
 				64FD96131A36646E00E389D3 /* CoreGraphics.framework */,
 				64FD96151A36646E00E389D3 /* UIKit.framework */,
@@ -119,6 +139,14 @@
 				64FD96271A36646E00E389D3 /* MDViewController.m */,
 				64FD96291A36646E00E389D3 /* Images.xcassets */,
 				64FD96181A36646E00E389D3 /* Supporting Files */,
+				33E470EC1A36711900F98235 /* MDLakerLocatorMapViewController.h */,
+				33E470ED1A36711900F98235 /* MDLakerLocatorMapViewController.m */,
+				33E470EF1A36727F00F98235 /* MDTweetViewController.h */,
+				33E470F01A36727F00F98235 /* MDTweetViewController.m */,
+				33E470F21A36738F00F98235 /* MDTweetTableViewCell.h */,
+				33E470F31A36738F00F98235 /* MDTweetTableViewCell.m */,
+				33E470F51A36744900F98235 /* MDTweetMapViewController.h */,
+				33E470F61A36744900F98235 /* MDTweetMapViewController.m */,
 			);
 			path = "Laker Locator";
 			sourceTree = "<group>";
@@ -251,8 +279,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				64FD961E1A36646E00E389D3 /* main.m in Sources */,
+				33E470F71A36744900F98235 /* MDTweetMapViewController.m in Sources */,
 				64FD96281A36646E00E389D3 /* MDViewController.m in Sources */,
+				33E470F11A36727F00F98235 /* MDTweetViewController.m in Sources */,
 				64FD96221A36646E00E389D3 /* MDAppDelegate.m in Sources */,
+				33E470F41A36738F00F98235 /* MDTweetTableViewCell.m in Sources */,
+				33E470EE1A36711900F98235 /* MDLakerLocatorMapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,6 +489,7 @@
 				64FD96421A36646E00E389D3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		64FD96431A36646E00E389D3 /* Build configuration list for PBXNativeTarget "Laker LocatorTests" */ = {
 			isa = XCConfigurationList;
@@ -465,6 +498,7 @@
 				64FD96451A36646E00E389D3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
