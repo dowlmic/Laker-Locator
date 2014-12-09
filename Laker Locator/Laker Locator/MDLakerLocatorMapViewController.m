@@ -69,6 +69,8 @@
     newPin.coordinate = locationCoordinates;
     [self.mapView removeAnnotations:self.mapView.annotations];
     [self.mapView addAnnotation:newPin];
+    
+    self.searchButton.enabled = YES;
 }
 
 @end

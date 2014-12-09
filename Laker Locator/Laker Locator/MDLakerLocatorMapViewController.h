@@ -11,6 +11,7 @@
 
 @interface MDLakerLocatorMapViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *searchButton;
 @property (weak, nonatomic) IBOutlet UILabel *distanceLabel;
 @property (weak, nonatomic) IBOutlet UISlider *distanceSlider;
 - (IBAction)distanceSliderValueChanged:(id)sender;

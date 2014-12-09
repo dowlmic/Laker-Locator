@@ -88,7 +88,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Laker Locator" id="sxG-2g-qIB">
-                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="QAM-Nu-j2M">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" systemItem="search" id="QAM-Nu-j2M">
                             <connections>
                                 <segue destination="866-8j-Zb6" kind="push" id="WVO-5T-zg8"/>
                             </connections>
@@ -98,6 +98,7 @@
                         <outlet property="distanceLabel" destination="PII-Am-6xB" id="aGz-6N-tuB"/>
                         <outlet property="distanceSlider" destination="IIu-1j-8mC" id="KAq-qL-fgt"/>
                         <outlet property="mapView" destination="Rln-Mc-W0O" id="t9Y-9J-WSb"/>
+                        <outlet property="searchButton" destination="QAM-Nu-j2M" id="P9t-T9-Lyp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
