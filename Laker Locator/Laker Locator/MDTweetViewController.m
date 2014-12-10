@@ -152,10 +152,4 @@ NSMutableDictionary *tweetData;
     return cell;
 }
 
-// Make sure the table view cell is tall enough to show at least 4 lines of text
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    return 90.0;
-}
-
 @end
