@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 
-@interface MDTweetMapViewController : UIViewController
+@interface MDTweetMapViewController : UIViewController <MKMapViewDelegate>
 
 @property (weak, nonatomic) IBOutlet MKMapView *tweetMapView;
+@property (strong, nonatomic) NSArray *tweetPins;
 
 @end

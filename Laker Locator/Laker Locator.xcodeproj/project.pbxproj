@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		333011BF1A37C4670021C79D /* twitterPin.png in Resources */ = {isa = PBXBuildFile; fileRef = 333011BE1A37C4670021C79D /* twitterPin.png */; };
 		33E470E91A366BC900F98235 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33E470E81A366BC900F98235 /* MapKit.framework */; };
 		33E470EB1A366BD000F98235 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33E470EA1A366BD000F98235 /* Social.framework */; };
 		33E470EE1A36711900F98235 /* MDLakerLocatorMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E470ED1A36711900F98235 /* MDLakerLocatorMapViewController.m */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		333011BE1A37C4670021C79D /* twitterPin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twitterPin.png; sourceTree = "<group>"; };
 		33E470E81A366BC900F98235 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		33E470EA1A366BD000F98235 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		33E470EC1A36711900F98235 /* MDLakerLocatorMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDLakerLocatorMapViewController.h; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 		64FD96171A36646E00E389D3 /* Laker Locator */ = {
 			isa = PBXGroup;
 			children = (
+				333011BE1A37C4670021C79D /* twitterPin.png */,
 				64FD96201A36646E00E389D3 /* MDAppDelegate.h */,
 				64FD96211A36646E00E389D3 /* MDAppDelegate.m */,
 				64FD96231A36646E00E389D3 /* Main.storyboard */,
@@ -264,6 +267,7 @@
 				64FD962A1A36646E00E389D3 /* Images.xcassets in Resources */,
 				64FD961C1A36646E00E389D3 /* InfoPlist.strings in Resources */,
 				64FD96251A36646E00E389D3 /* Main.storyboard in Resources */,
+				333011BF1A37C4670021C79D /* twitterPin.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

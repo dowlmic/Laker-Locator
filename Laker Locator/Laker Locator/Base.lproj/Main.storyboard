@@ -90,7 +90,7 @@
                     <navigationItem key="navigationItem" title="Laker Locator" id="sxG-2g-qIB">
                         <barButtonItem key="rightBarButtonItem" enabled="NO" systemItem="search" id="QAM-Nu-j2M">
                             <connections>
-                                <segue destination="866-8j-Zb6" kind="push" id="WVO-5T-zg8"/>
+                                <segue destination="866-8j-Zb6" kind="push" identifier="segueToTweetTable" id="WVO-5T-zg8"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -136,7 +136,7 @@
                                                         <constraint firstAttribute="width" constant="43" id="Cfi-V5-wRp"/>
                                                     </constraints>
                                                 </imageView>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kJ4-ja-Ibf">
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kJ4-ja-Ibf">
                                                     <rect key="frame" x="71" y="0.0" width="229" height="76"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -175,7 +175,7 @@
                     <navigationItem key="navigationItem" title="Tweetin' Lakers!" id="x0b-xE-fDi">
                         <barButtonItem key="rightBarButtonItem" title="Map" id="D8Y-84-7w8">
                             <connections>
-                                <segue destination="2Q7-yn-qyM" kind="push" id="J9R-n7-cFX"/>
+                                <segue destination="2Q7-yn-qyM" kind="push" identifier="segueToTweetMap" id="J9R-n7-cFX"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

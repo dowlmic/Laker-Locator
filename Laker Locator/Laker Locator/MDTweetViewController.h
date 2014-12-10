@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MDTweetViewController : UIViewController
+@interface MDTweetViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+
 @property (weak, nonatomic) IBOutlet UITableView *tweetTableView;
+@property (assign, nonatomic) int distance;
+@property (assign, nonatomic) double latitude;
+@property (assign, nonatomic) double longitude;
+
 @end
