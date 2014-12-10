@@ -161,6 +161,17 @@
                                             <outlet property="tweetTextView" destination="kJ4-ja-Ibf" id="cxi-Dz-SLE"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="93" id="GDb-QK-z41">
+                                        <rect key="frame" x="0.0" y="163" width="320" height="93"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GDb-QK-z41" id="j8j-Sc-zTy">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="92"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <accessibilityTraits key="traits" none="YES" image="YES" staticText="YES"/>
+                                        </accessibility>
+                                    </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>

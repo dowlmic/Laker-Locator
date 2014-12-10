@@ -7,7 +7,6 @@
 //
 
 #import "MDTweetViewController.h"
-#import "MDTweetTableViewCell.h"
 #import "MDTweetMapViewController.h"
 #import <Accounts/Accounts.h>
 #import <Social/Social.h>
@@ -65,6 +64,8 @@ NSMutableDictionary *tweetData;
                 // Set up the request to the Twitter API
                 NSURL *url = [NSURL URLWithString:@"https://api.twitter.com/1.1/search/tweets.json?"];
                 NSString *geocodeString = [NSString stringWithFormat:@"%f,%f,%dmi", self.latitude, self.longitude, self.distance];
+                
+                // Query for 50 Tweets using the current account's username that contain "gvsu" within the specified geocode
                 NSDictionary *parameters = @{ @"screen_name" : twitterAccount.username,
                                               @"q" : @"gvsu",
                                               @"count" : @"50",
@@ -135,11 +136,13 @@ NSMutableDictionary *tweetData;
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    MDTweetTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"tweetCell"];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
     
     // Set the cell's text to the Tweet text
     NSDictionary *tweet = tweetData[@"statuses"][indexPath.row];
-    cell.tweetTextView.text = tweet[@"text"];
+    cell.textLabel.numberOfLines = 4;
+    cell.textLabel.font = [UIFont systemFontOfSize:14];
+    cell.textLabel.text = tweet[@"text"];
     
     // Set the cell's image to the Tweet image
     NSString *urlString = tweet[@"user"][@"profile_image_url"];
@@ -147,6 +150,12 @@ NSMutableDictionary *tweetData;
     cell.imageView.image = tweetImage;
     
     return cell;
+}
+
+// Make sure the table view cell is tall enough to show at least 4 lines of text
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 90.0;
 }
 
 @end
